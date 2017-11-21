@@ -38,12 +38,31 @@ print(l)    #[array([1, 2, 3]), array([7, 8]), array([ 9,  10, 100, 101, 102])]
 
 
 '''
-    np.where(where(condition, x=None, y=None))
+    np.where(condition, x=None, y=None)
 
-        返回condition中非零项的索引
-'''
-l = np.where([1, 2, 0, 4, 0, 5])
-print(l)  #(array([0, 1, 3, 5], dtype=int64),)
+        格式
+            numpy.where(condition[, x, y])
+        参数
+            condition : array_like, bool
+            if conditon == True:
+            取当前位置的x的值
+            else：
+            取当前位置的y的值
+        返回值
+            返回一个数组，或者由数组组成的元组
+            根据定义条件返回元素，这些元素或者从x中获得，或者从y中获得。
+            如果只给出条件，没有给出[,x, y]，返回条件中非零（True）元素的坐标。
+
+    '''
+a = np.array([1, 2, 0, 4, 0, 5])
+l = np.where(a>2)
+print(l)  #(array([3, 5], dtype=int64),)
+print(a[l])
+x = np.arange(9.).reshape(3, 3)
+np.where(x < 5, x, -1)               # 值替换
+# array([[ 0.,  1.,  2.],
+#        [ 3.,  4., -1.],
+#        [-1., -1., -1.]])
 
 '''
     np.diff(a, n=1, axis=-1)
