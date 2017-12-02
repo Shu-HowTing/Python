@@ -18,7 +18,8 @@ import numpy as np
 
 #可能用到的函数有：numpy.maximum.accumulate()和numpy.where()。
 def choices():
-    """返回一个长度与data相同的数组，其中的每个下标index的值为
+    """
+    返回一个长度与data相同的数组，其中的每个下标index的值为
     当k=index时，所选择的数
     """
     #np.random.seed(0)
