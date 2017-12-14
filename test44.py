@@ -28,7 +28,7 @@ def bubblesort(a, n):
                 flag = False
         if flag == True:
             break
-l = [1,2,3,7,6]
+l = [1,2,3,7,6,5,4]
 bubblesort(l,len(l))
 print(l)
 

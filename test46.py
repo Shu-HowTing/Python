@@ -16,6 +16,7 @@ def lcs(a, b):
                 c[i + 1][j + 1] = c[i][j] + 1
                 flag[i + 1][j + 1] = 'ok'
             elif c[i + 1][j] > c[i][j + 1]:
+
                 c[i + 1][j + 1] = c[i + 1][j]
                 flag[i + 1][j + 1] = 'left'
             else:

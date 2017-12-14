@@ -51,3 +51,9 @@ if __name__ == '__main__':
 # if __name__ == "__main__":
 #     seq = [10, 5, 8, 9, 14, 4, 7, 8, 3, 5, 9, 2]
 #     print(merge_sort(seq))
+
+l = [1,2,3,4]
+def f(a):
+    a[2] = 0
+f(l)
+print(l)
